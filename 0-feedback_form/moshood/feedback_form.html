@@ -4,45 +4,75 @@
 <head>
     <meta lang="en">
     <title>CodeTrybe Feedback Form</title>
-</head>                                                                                           
-<body>                                                  
-<h1>FEED BACK FORM</h1>                                 
+</head>
+
+<body>
+
+<div class="feed-back">
+	<h1>FEED BACK FORM</h1>
+</div>
+
 <form>
+<div class="full-name">
         <label for="full name">
             <p>Name: <input type="text" placeholder="full name"></p>
         </label>
+</div>
+
+<div class="email">
 	
 	<label for="email">
 		<p>Email: <input type="email" placeholder="123@gmail.com"></p>
 	</label>
-	
+</div>
+
+<div class="group">	
 	<label for="cohort">
-		<p>Cohort: <input type="text" placeholder="your cohort"></p>
+	<label for="cohort">Cohort</label>
+
+	<select name="Cohort" id="cohort">
+	<option value="Nil">Select Your Cohort</option>
+	<option value="Cohort 5">Cohort 5</option>
+	<option value="Cohort 6">Cohort 6</option>
+	<option value="Cohort 7">Cohort 7</option>
+	<option value="Cohort 8">Cohort 8</option>
+	<option value="Cohort 9">Cohort 9</option>
+	<option value="Cohort 10">Cohort 10</option>
+	<option value="Cohort 11">Cohort 11</option>
 	</label>
-	
+</div>
+
+<div class="topic">
 	<label for="topic">
-		<p>PLD Topic: <input type="text" placeholder="Function"></p>
+	<p>PLD Topic: <input type="text" placeholder="Please input today's PLD topic received"></p>
 	</label>
-	
+</div>
+
+<div class="date">	
 	<label for="date">
-		<p>PLD Date: <input type="date" placeholder="date"></p>
+	<p>PLD Date: <input type="date" placeholder="date"></p>
 	</label>
+</div>
 	
+<div class="gender">
 	<p>Gender: </p>
 	<label for="gender">Male</label>
-		<input type="radio" name="gender">
-	
+	<input type="radio" name="gender">
 	<label for="gender">Female</label>
-		<input type="radio" name="gender" checked="checked">
+	<input type="radio" name="gender" checked="checked">
+</div>
+
+<div class="feedback">
 	<label for="feedback">
-		<p><textarea rows="7" cols="20">Feedback</textarea></p>
+	<p><textarea rows="7" cols="20">Feedback</textarea></p>
 	</label>
-	
+</div>
+
+<div class="submit">
 	<label for="submit">
-		<p><input type="submit" name ="" value="submit"></p>
+	<p><input type="submit" name ="" value="submit"></p>
 	</label>
-
-	</form>
-
+</div>
+</form>
 </body>                                                 
 </html>            
