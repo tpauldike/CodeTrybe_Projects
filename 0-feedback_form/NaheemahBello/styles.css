@@ -1,0 +1,44 @@
+*{
+    padding: 4px;
+    margin: 4px;
+}
+form{
+    background-color: whitesmoke;
+}
+fieldset{
+    background-color: white;
+}
+legend{
+    background-color: white;
+}
+h1{
+    font-family: Arial;
+    margin: 10px;
+    padding: 10px;
+}
+input{
+    color: black;
+    padding: 4px;
+    margin: 4px;
+}
+select{
+    color: black;
+}
+.form-container{
+    font-size: 1.3rem;
+    padding: 3px, 0;
+    margin: 5px 0 5px 0;
+    font-weight: 100;
+}
+legend{
+    font-size: 1.3rem;
+    font: bold;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+h2{
+    font-size: 1.3rem;
+    font: bold;
+    font-family: sans-serif;
+    font-weight: 900;
+}
