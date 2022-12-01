@@ -69,32 +69,38 @@ function isEmail(email) {
 }
 
 function submitForm() {
-    const email = emailInput.value;
-    const name = nameInput.value;
-    const cohort = cohortInput.value;
+	const email = emailInput.value;
+	const name = nameInput.value;
+	const cohort = cohortInput.value;
 
 	if (!email || !name || cohort === "Nil") {
 		console.log("Please enter all required fields");
 	} else {
-		btn.disabled = true;
 		btn.innerHTML = "Loading... ";
-	
+
 		console.log(form);
 		fetch(url, {
 			method: "POST",
 			body: new FormData(form),
 		})
 			.then((response) => {
-				btn.disabled = false;
 				btn.innerHTML = "Submit";
-				console.log(response);
-				alert("Success! " + response);
+				swal({
+					title: "Good job!",
+					text: "Thank you for your feedback",
+					icon: "success",
+					button: "Ok",
+				}).then(() => {
+					window.location.reload();
+				});
 			})
 			.catch((error) => {
-				btn.disabled = false;
-				btn.innerHTML = "Submit";
-				alert("Error!" + error.message);
+				swal({
+					title: "Oops!",
+					text: error.message,
+					icon: "error",
+					button: "Ok",
+				});
 			});
 	}
-
 }
