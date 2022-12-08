@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Trybe Feedback Form</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="title-container">
+  </div>
+  <div class="form-container">
+    <div class="form-field-container">
+      <div class="container-left"></div>
+      <div class="container-right">
+        <h2 class="title" >CodeTrybe Feedback Form</h2>
+        <p>Take a minute to fill this feedback form</p>
+        <form class="form_fb" action="https://sheetdb.io/api/v1/j2rqa6ug0y1hc" method="post" id="codetrybe_form">
+          <label for="fname">Name<input name="data[name]" required class="name" type="text" placeholder="Surname, firstname & other name(s)"></label><br>
+          <label for="email">Email<input name="data[email]" required class="email" type="email" placeholder="you@codetrybe.com"></label><br>
+          <label for="sex">Gender
+            <select required name="data[gender]" class="sex" name="sex_select" id="sex">
+              <option value="sex_display">---</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select><br>
+          </label>
+          <label for="cohort">Cohort
+            <select required name="data[cohort]" class="cohort" name="cohort" id="cohort">
+              <option value="option">---</option>
+              <option value="cohort-5">Cohort 5</option>
+              <option value="cohort-6">Cohort 6</option>
+              <option value="cohort-7">Cohort 7</option>
+              <option value="cohort-8">Cohort 8</option>
+              <option value="cohort-9">Cohort 9</option>
+              <option value="cohort-10">Cohort 10</option>
+              <option value="cohort-11">Cohort 11</option>
+            </select><br>
+          </label>
+          <label for="date">Date<input name="data[date]" required class="date" type="date"></label><br>
+          <label for="textarea">
+            Comments
+            <textarea name="data[comments]" class="text" name="suggestion" id="suggestion" cols="30" rows="3" placeholder="Let's have your suggestions, commendations or recommendations"></textarea><br>
+          </label>
+          <!-- <h4 style="color: rgb(0, 9, 128); margin-bottom: 0px;" id="panel"></h4> -->
+          <label for="submit"><input id="send" class="submit_button" type="submit"></label>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>
