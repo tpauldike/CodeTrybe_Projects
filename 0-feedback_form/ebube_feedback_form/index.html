@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeTrybe Feedback form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">CodeTrybe Feedback Form</h1>
+        <p id="description">Your feedback is valuable to us, kindly fill the form below.</p>
+    </header>
+    <form id="survey-form" action='#'>
+        <fieldset>
+            <label for="email" id="email-label">E-mail: <input id="email" type="email" placeholder="Enter your email"
+                    required /></label>
+            <label for="name" id="name-label">Full name: <input type="text" id="name" placeholder="Enter your full name"
+                    required /></label>
+            <label for="cohort" id="cohort-label">Cohort:
+                <select id="referrer" name="referrer">
+                    <option value="">--Select your cohort-- </option>
+                    <option value="1">Cohort 5</option>
+                    <option value="2">Cohort 6</option>
+                    <option value="3">Cohort 7</option>
+                    <option value="4">Cohort 8</option>
+                    <option value="1">Cohort 9</option>
+                    <option value="2">Cohort 10</option>
+                    <option value="3">Cohort 11</option>
+                    <option value="4">Cohort 12</option>
+                </select>
+            </label>
+            <label for="male"><input type="radio" name="gender" id="male" value="male" class="inline" />Male</label>
+            <label for="female"><input type="radio" name="gender" id="female" value="female"
+                    class="inline" />Female</label>
+            </fieldset>
+            <fieldset>
+                <label for="date">PLD date: <input type="date" id="date" required /></label>
+                <label for="topic" id="topic-label">PLD Topic: <input type="text" id="topic"
+                        placeholder="Please enter topic" required /></label>
+
+                <label for="bio">Feedback
+                    <textarea id="bio" name="bio" rows="3" cols="30"
+                        placeholder="Tell us what you feel about today's session"></textarea>
+                </label>
+            </fieldset>
+        <input type="submit" id="submit" value="Submit" />
+    </form>
+</body>
+
+</html>
