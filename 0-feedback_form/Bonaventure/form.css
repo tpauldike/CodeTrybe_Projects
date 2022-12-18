@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif ;
+}
+
+body {
+  width: 100%;
+  height: 115vh;
+}
+
+.form-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 100px;
+}
+
+.form-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/hacker-developer.jpg");
+  background-size: cover;
+  z-index:  -1;
+  filter: blur(50px);
+}
+
+.form-field-container {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.728);
+  box-shadow: 0px 0px 19px 5px rgba(8, 1, 23, 0.19);
+}
+
+.container-left {
+  height: 100%;
+  background: url("images/hacker-developer.jpg") no-repeat center;
+  background: cover;
+}
+
+.container-right {
+  height: 90%;
+  padding: 25px 40px;
+}
+
+p {
+  margin: 10px 15px;
+}
+.title {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  color: rgb(0, 9, 128);
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 45%;
+  bottom: 0;
+  transform: translateX(-50);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: rgba(249, 7, 15, 0.941);
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  /*border: 1px solid rgba(0, 0, 0, 0);*/
+  background-color: rgba(230, 230, 230, 0.6);
+  font-size: .9rem;
+  margin-bottom: 18px;
+  transition: .3s;
+  border: 1px solid rgb(0, 9, 128);
+  border-radius: 5px;
+}
+
+select:hover, 
+input:hover,
+.text:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+select:focus, 
+input:focus,
+.text:focus {
+  background-color: #fff;
+  border: 2 solid rgba(30, 85, 250, 0.47);
+}
+
+
+.text {
+  min-height: 50px;
+  width: 100%;
+  outline: none;
+  /*border: 2px solid rgba(0, 0, 0, 0);*/
+  background-color: rgba(230, 230, 230, 0.6);
+  font-size: .9rem;
+  margin-bottom: 22px;
+  transition: .3s;
+  border: 1px solid rgb(0, 9, 128);
+  border-radius: 5px;
+}
+
+label {
+  font-size: 1.2rem;
+  color: rgb(0, 9, 128);
+  margin-bottom: px;
+}
+
+.submit_button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.15rem;
+  color: #fff;
+  background-color: rgb(42, 49, 119);;
+  cursor: pointer;
+  outline: none;
+  border-radius: 1px;
+  border: 1px solid rgb(0, 9, 128);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 880px) {
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+
+  .container-left {
+    height: 200px;
+  }
+}
