@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Feedback form</title><link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>CodeTrybe Feedback Form</h1>
+
+    <div class="theForm">
+    <p>
+      <form enctype="text/plain" method="get" name="feedbackForm" onsubmit="submit()" autocomplete="on">
+        <input name="fullname" required placeholder="Surname, firstname & other name(s)"><br>
+        <input type="email" name="email" required placeholder="you@codetrybe.com" ><br>
+        <div class="sex">
+          Sex: <br>
+          <input type="radio" name="sex" value="male">
+          Male
+          <input type="radio" name="sex" value="female">
+          Female<br>
+        </div>
+        <br>
+        <select name="cohort">
+          <option value="">--Select your cohort--</option>
+          <option value="cohort-5">Cohort 5</option>
+          <option value="cohort-6">Cohort 6</option>
+          <option value="cohort-7">Cohort 7</option>
+          <option value="cohort-8">Cohort 8</option>
+          <option value="cohort-9">Cohort 9</option>
+          <option value="cohort-10">Cohort 10</option>
+          <option value="cohort-11">Cohort 11</option>
+          <option value="cohort-x">Others</option>
+        </select><br>
+        <input name="pldTopic" required placeholder="Enter the topic of the PLD"><br>
+        <input type="date" name="date" required><br>
+        <input type="text" name="feedback" placeholder="Let's have your complain, suggestion, commendation or recommendation">
+        <br><input type="button" value="submit">
+      </form>
+    </p>
+  </div>
+  </body>
+  <footer><!--See the main.js file for the content--></footer>
+  <script src="scripts/main.js"></script>
+</html>

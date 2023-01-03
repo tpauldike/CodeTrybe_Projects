@@ -1,0 +1,65 @@
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+
+html {
+  background-color: #112231;
+}
+
+body {
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 0 20px 20px 20px;
+  border: 1px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #468ebe;
+  text-shadow: 2px 1px 1px black;
+}
+
+input {
+  width: 600px;
+  background-attachment: scroll;
+  background-size: contain;
+  padding: 10px;
+  margin: 5px;
+}
+
+select {
+  width: 600px;
+  padding: 10px;
+}
+
+span{
+  float: left;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+footer{
+  color: #09317a;
+  font-size: 20px;
+  font-weight: 800;
+  bottom: 0px;
+}
