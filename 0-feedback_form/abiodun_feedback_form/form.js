@@ -89,6 +89,7 @@ function submitForm() {
 					title: "Good job!",
 					text: "Thank you for your feedback",
 					icon: "success",
+					timer: 3000,
 					button: "Ok",
 				}).then(() => {
 					window.location.href = "subscribe.html";
