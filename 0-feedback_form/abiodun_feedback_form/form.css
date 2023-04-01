@@ -177,8 +177,18 @@ option {
 	transform: scale(0.95);
 }
 
-@media (max-width: 960px) {
-	form {
-		max-width: 500px;
+@media (max-width: 760px) {
+	.wrapper {
+		width: 90%;
+	}
+	label {
+		font-size: 20px;
+	}
+	input, textarea, select {
+		font-size: 16px;
+	}
+	.btn {
+		width: 80%;
+		font-size: 20px;
 	}
 }

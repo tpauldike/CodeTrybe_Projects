@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Poppins, sans-serif;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: url(https://thumbs.dreamstime.com/b/coding-background-wallpaper-designs-coding-background-wallpaper-use-computing-use-design-layouts-181885109.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.about-box {
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	max-width: 800px;
+	width: 100%;
+}
+
+.about-title {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: -10px;
+}
+
+.about-subtitle {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+.about-description {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.social-media {
+	display: flex;
+	justify-content: center;
+}
+
+.social-media a {
+	margin: 0 10px;
+}
+
+.social-media img {
+	height: 40px;
+	width: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+	.about-box {
+		padding: 20px;
+	}
+	
+	.about-title {
+		font-size: 1.5rem;
+		margin-bottom: -5px;
+	}
+	
+	.about-subtitle {
+		font-size: 1.5rem;
+		margin-bottom: 10px;
+	}
+	
+	.about-description {
+		font-size: 1rem;
+		margin-bottom: 10px;
+	}
+	
+	.social-media {
+		margin-top: 10px;
+	}
+	
+	.social-media img {
+		height: 30px;
+		width: 30px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.about-box {
+		padding: 10px;
+	}
+	
+	.about-title {
+		font-size: 1.2rem;
+		margin-bottom: -5px;
+	}
+	
+	.about-subtitle {
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+	}
+	
+	.about-description {
+		font-size: 1rem;
+		margin-bottom: 10px;
+	}
+	
+	.social-media {
+		margin-top: 10px;
+	}
+	
+	.social-media img {
+		height: 25px;
+		width: 25px;
+	}
+}

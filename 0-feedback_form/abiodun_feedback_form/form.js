@@ -91,7 +91,7 @@ function submitForm() {
 					icon: "success",
 					button: "Ok",
 				}).then(() => {
-					window.location.reload();
+					window.location.href = "subscribe.html";
 				});
 			})
 			.catch((error) => {
