@@ -76,9 +76,31 @@ function submitForm() {
 	if (!email || !name || cohort === "Nil") {
 		console.log("Please enter all required fields");
 	} else {
+		const savedEmail = localStorage.getItem("email");
+		if (savedEmail) {
+			const savedTime = localStorage.getItem("time");
+			const currentTime = new Date().getTime();
+			const elapsedTime = (currentTime - savedTime) / 1000 / 60;
+			if (elapsedTime < 2) {
+				console.log("Your feedback has already been taken");
+				swal({
+					title: "Whoops!!!",
+					text: "You have already submitted your feedback",
+					icon: "error",
+					button: "Ok",
+				}).then(() => {
+					window.location.reload();
+				});
+				return;
+			} else {
+				localStorage.clear();
+			}
+		}
+		localStorage.setItem("email", email);
+		localStorage.setItem("time", new Date().getTime());
+
 		btn.innerHTML = "Loading... ";
 
-		console.log(form);
 		fetch(url, {
 			method: "POST",
 			body: new FormData(form),
