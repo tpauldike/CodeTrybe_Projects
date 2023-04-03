@@ -81,7 +81,7 @@ function submitForm() {
 			const savedTime = localStorage.getItem("time");
 			const currentTime = new Date().getTime();
 			const elapsedTime = (currentTime - savedTime) / 1000 / 60;
-			if (elapsedTime < 2) {
+			if (elapsedTime < 2000) {
 				console.log("Your feedback has already been taken");
 				swal({
 					title: "Whoops!!!",
