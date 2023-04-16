@@ -26,5 +26,10 @@ export const postFeedback = async (req, res) => {
 		});
 	} catch (error) {
 		console.log(`Error creating Feedback: ${error.message}`);
+		return res
+			.status(500)
+			.json({
+				message: "Internal Server Error, please contact administrator",
+			});
 	}
 };
