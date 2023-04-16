@@ -13,7 +13,7 @@ app.use(cors());
 
 initiateDb();
 
-app.get('/api/test', (req, res) => {
+app.get('/', (req, res) => {
 	return res.status(200).json({message: "FeedBack service is available!!!"})
 })
 
