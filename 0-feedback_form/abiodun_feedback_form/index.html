@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
 	<link rel="stylesheet" href="./form.css"/>
-	<script src="./form.js" defer></script>
+	<script src="./main.js" defer></script>
 </head>
 <body>
 	<section class="wrapper">
@@ -62,8 +62,13 @@
 				<input type="date" name="Date of Event" id="date">
 			</div>
 			<div class="form-group">
-				<label for="topic">Name of Event</label>
-				<input type="text" name="Name of Event" id="topic" placeholder="Type in the Name of Event Attended">
+				<label for="topic">Event Type</label>
+				<select name="event_type" id="event">
+					<option value="Nil">Select the type of event attended</option>
+					<option value="Community Hangout">Community Hangout</option>
+					<option value="PLD">PLD</option>
+					<option value="Other">Other</option>
+				</select>
 			</div>
 			<div class="form-group">
 				<label for="feedback">Feedback</label>
