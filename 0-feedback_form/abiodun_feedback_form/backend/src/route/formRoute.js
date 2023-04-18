@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { postFeedback } from "../controller/formController.js";
+import { getFeedbacks, postFeedback } from "../controller/formController.js";
 
 const router = Router();
 
 router.post("/feedback", postFeedback);
+router.get("/feedback", getFeedbacks)
 
 export default router;

@@ -26,6 +26,24 @@ export const postFeedback = async (req, res) => {
 		});
 	} catch (error) {
 		console.log(`Error creating Feedback: ${error.message}`);
+		return res.status(500).json({
+			message: "Internal Server Error, please contact administrator",
+		});
+	}
+};
+
+// Retrieve feedback
+export const getFeedbacks = async (req, res) => {
+	try {
+		const feedbacks = await Form.find();
+		return res
+			.status(200)
+			.json({
+				message: "Feedback retrieved successfully",
+				data: feedbacks,
+			});
+	} catch (error) {
+		console.log(`Error getting feedbacks: ${error.message}`);
 		return res
 			.status(500)
 			.json({
