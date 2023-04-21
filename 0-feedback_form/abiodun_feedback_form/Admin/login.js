@@ -12,12 +12,15 @@ loginForm.addEventListener("submit", (event) => {
 	if (username === "CodeTrybe" && password === "admin@CT001") {
 		btn.value = "Loading...";
 		errorMessage.innerHTML = ""
+		localStorage.setItem("username", "CodeTrybe");
+		localStorage.setItem("password", "admin@CT001");
 		// If valid, redirect to admin page
 		setTimeout(() => {
 			window.location.href = "./admin.html";
 		}, 2000);
 	} else {
 		// If invalid, show error message
+		localStorage.clear();
 		errorMessage.innerHTML = "Invalid username or password";
 	}
 });
