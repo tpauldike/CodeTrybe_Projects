@@ -30,7 +30,7 @@ div {
 
 /* Filter label styles */
 label[for="event-filter"],
-label[for="sort-by"]{
+label[for="sort-by"] {
 	margin-left: 60px;
 	font-size: 16px;
 	color: #333;
@@ -108,4 +108,17 @@ th {
 }
 tr:nth-child(even) {
 	background-color: #f9f9f9;
+}
+
+#unauthorized {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	text-align: center;
+}
+
+#unauthorized p {
+	margin-top: -5px;
 }

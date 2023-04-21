@@ -6,6 +6,9 @@ const eventFilter = document.querySelector("#event-filter");
 const sortBy = document.querySelector("#sort-by");
 const sortOrder = document.querySelector("#sort-order");
 
+const username = localStorage.getItem("username");
+const password = localStorage.getItem("password");
+
 const retrieveData = () => {
 	fetch(url)
 		.then((response) => response.json())
@@ -61,7 +64,21 @@ const retrieveData = () => {
 };
 
 window.onload = () => {
-	retrieveData();
+	if (username && password) {
+		retrieveData();
+	} else {
+		const unauthorizedPage = document.createElement("div");
+		unauthorizedPage.innerHTML = `
+			<div id="unauthorized">
+			<h1>Unauthorized access</h1>
+			<p>You will be redirected to the login page in <b>3secs</b>.</p>
+			</div>
+			`;
+		document.body.appendChild(unauthorizedPage);
+		// setTimeout(() => {
+		// 	window.location.href = "login.html";
+		// }, 3000);
+	}
 };
 
 const fetchData = () => {
