@@ -1,59 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="../img/CdTb_logo-trial.png">
-	<link rel="stylesheet" href="style.css">
-	<title>Admin Page</title>
-</head>
-<body>
-	<h1>Admin Page</h1>
-	<div>
-		<label for="event-filter">Filter by Event Type:</label>
-		<select id="event-filter">
-			<option value="">All</option>
-			<option value="Community Hangout">Community Hangout</option>
-			<option value="PLD">PLD</option>
-			<option value="Other">Other</option>
-		</select>
-	</div>
-	<div>
-		<label for="sort-by">Sort by:</label>
-		<select id="sort-by">
-			<option value="name">Name</option>
-			<option value="email">Email</option>
-			<option value="cohort">Cohort</option>
-			<option value="gender">Gender</option>
-			<option value="date">Date</option>
-			<option value="event_type">Event Type</option>
-			<option value="feedback">Feedback</option>
-		</select>
-		<label for="sort-order">Order:</label>
-		<select id="sort-order">
-			<option value="asc">Ascending</option>
-			<option value="desc">Descending</option>
-		</select>
-		<!-- <button id="sort-btn">Sort</button> -->
-	</div>
-	<!-- <button id="refresh-btn">Refresh</button> -->
-    <table id="data-table">
-        <thead>
-            <tr>
-				<th>S/N</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Cohort</th>
-                <th>Gender</th>
-				<th>Date</th>
-                <th>Event Type</th>
-                <th>Feedback</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-    <script src="main.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="login.css" />
+		<link rel="icon" href="../img/CdTb_logo-trial.png" />
+		<title>Login Page</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Login</h1>
+			<form id="login-form">
+				<label for="username">Username</label>
+				<input type="text" id="username" name="username" />
+
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" />
+
+				<input id="submit" type="submit" value="Login" />
+				<div class="error-message"></div>
+			</form>
+		</div>
+		<script src="login.js"></script>
+	</body>
 </html>
