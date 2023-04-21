@@ -76,7 +76,7 @@ window.onload = () => {
 			`;
 		document.body.appendChild(unauthorizedPage);
 		setTimeout(() => {
-			window.location.href = "login.html";
+			window.location.href = "./index.html";
 		}, 3000);
 	}
 };
