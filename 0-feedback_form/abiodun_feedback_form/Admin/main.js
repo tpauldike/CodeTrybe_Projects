@@ -1,4 +1,5 @@
 const url = "https://codetrybe-form-api.vercel.app/api/codetrybe/feedback";
+// const url = "http://localhost:6060/api/codetrybe/feedback";
 
 const refreshButton = document.querySelector("#refresh-btn");
 const dataTable = document.querySelector("#data-table tbody");
@@ -50,6 +51,10 @@ const retrieveData = () => {
 				const eventTypeCell = document.createElement("td");
 				eventTypeCell.textContent = item.event_type;
 				row.appendChild(eventTypeCell);
+
+				const pldTopicCell = document.createElement("td");
+				pldTopicCell.textContent = item.pld_topic;
+				row.appendChild(pldTopicCell);
 
 				const feedbackCell = document.createElement("td");
 				feedbackCell.textContent = item.feedback;
@@ -139,6 +144,10 @@ const fetchData = () => {
 				const eventTypeCell = document.createElement("td");
 				eventTypeCell.textContent = item.event_type;
 				row.appendChild(eventTypeCell);
+
+				const pldTopicCell = document.createElement("td");
+				pldTopicCell.textContent = item.pld_topic;
+				row.appendChild(pldTopicCell);
 
 				const feedbackCell = document.createElement("td");
 				feedbackCell.textContent = item.feedback;

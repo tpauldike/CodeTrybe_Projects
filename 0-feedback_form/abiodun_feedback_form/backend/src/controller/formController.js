@@ -3,7 +3,7 @@ import { Form } from "../model/formModel.js";
 // Post a new Feedback
 export const postFeedback = async (req, res) => {
 	try {
-		const { name, email, cohort, sex, date, event_type, feedback } =
+		const { name, email, cohort, sex, date, event_type, pld_topic, feedback } =
 			req.body;
 		const existingFeedback = await Form.findOne({ email, event_type });
 		if (existingFeedback) {
@@ -18,6 +18,7 @@ export const postFeedback = async (req, res) => {
 			sex,
 			date,
 			event_type,
+			pld_topic,
 			feedback,
 		});
 		return res.status(201).json({

@@ -152,6 +152,10 @@ option {
 	color: #00008072;
 }
 
+#pldTopicGroup {
+	display: none;
+}
+
 .btn-box {
 	margin-top: 30px;
 	text-align: center;

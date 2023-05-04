@@ -3,13 +3,28 @@ const btn = document.querySelector(".btn");
 const emailInput = document.querySelector("#email");
 const nameInput = document.querySelector("#name");
 const cohortInput = document.querySelector("#cohort");
+const dateInput = document.querySelector("#date");
+const event_type = document.getElementById("event");
+const pldTopicGroup = document.querySelector("#pldTopicGroup");
+const pldTopicInput = document.querySelector("#pldTopic");
 
 const url = "https://codetrybe-form-api.vercel.app/api/codetrybe/feedback";
+// const url = "http://localhost:6060/api/codetrybe/feedback";
 
 // Focus on Email field when the page loads
 window.onload = setTimeout(() => {
 	emailInput.focus();
 }, 1000);
+
+event_type.addEventListener("change", (e) => {
+	e.preventDefault();
+	const eventType = event_type.value;
+	if (eventType === "PLD") {
+		pldTopicGroup.style.display = "block";
+	} else {
+		pldTopicGroup.style.display = "none";
+	}
+});
 
 // Functionality for the form validation
 form.addEventListener("submit", (e) => {
@@ -25,13 +40,10 @@ function checkInputs() {
 	const emailInputValue = emailInput.value;
 	const nameInputValue = nameInput.value;
 	const cohortInputValue = cohortInput.value;
-
-	if (cohortInputValue === "Nil") {
-		setErrorFor(cohortInput, "Please select your cohort");
-		cohortInput.focus();
-	} else {
-		setSuccessFor(cohortInput);
-	}
+	const pldTopicInputValue = pldTopicInput.value;
+	const sexInputs = document.querySelectorAll('input[name="Sex"]');
+	const sex = document.querySelector(".sex");
+	const feedback = document.querySelector("#Feedback");
 
 	if (emailInputValue === "") {
 		setErrorFor(emailInput, "Email Address cannot be empty");
@@ -42,12 +54,36 @@ function checkInputs() {
 	} else {
 		setSuccessFor(emailInput);
 	}
-
 	if (nameInputValue === "") {
 		setErrorFor(nameInput, "Name cannot be empty");
 		nameInput.focus();
 	} else {
 		setSuccessFor(nameInput);
+	}
+	if (cohortInputValue === "Nil") {
+		setErrorFor(cohortInput, "Please select your cohort");
+		cohortInput.focus();
+	} else {
+		setSuccessFor(cohortInput);
+	}
+
+	if (!document.querySelector('input[name="Sex"]:checked')) {
+		setErrorFor(sex, "Please select your gender");
+		return;
+	} else {
+		setSuccessFor(sexInputs[0].parentElement);
+	}
+	if (event_type.value === "PLD" && pldTopicInputValue.trim() === "") {
+		setErrorFor(pldTopicInput, "PLD Topic cannot be empty");
+		pldTopicInput.focus();
+	} else {
+		setSuccessFor(pldTopicInput);
+	}
+	if (feedback.value === "") {
+		setErrorFor(feedback, "Feedback cannot be empty");
+		return;
+	} else {
+		setSuccessFor(feedback);
 	}
 }
 
@@ -72,16 +108,25 @@ function submitForm() {
 	const name = nameInput.value;
 	const cohort = cohortInput.value;
 	const sex = document.querySelector('input[name="Sex"]:checked').value;
+	const date = dateInput.value;
 	const eventType = document.querySelector("#event").value;
 	const feedback = document.querySelector("#Feedback").value;
+	const pldTopic = pldTopicInput.value;
+
+	if (!email || !name || !cohort || !sex || !eventType || !feedback) {
+		console.log("all fields are required");
+		return;
+	}
 
 	const data = {
 		name,
 		email,
 		cohort,
 		sex,
+		date: date || new Date(),
 		event_type: eventType,
 		feedback,
+		pld_topic: pldTopic || "Nil",
 	};
 
 	console.log(data);
