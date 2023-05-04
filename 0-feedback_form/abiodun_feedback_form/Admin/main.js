@@ -1,5 +1,5 @@
-// const url = "https://codetrybe-form-api.vercel.app/api/codetrybe/feedback";
-const url = "http://localhost:6060/api/codetrybe/feedback";
+const url = "https://codetrybe-form-api.vercel.app/api/codetrybe/feedback";
+// const url = "http://localhost:6060/api/codetrybe/feedback";
 
 const refreshButton = document.querySelector("#refresh-btn");
 const dataTable = document.querySelector("#data-table tbody");

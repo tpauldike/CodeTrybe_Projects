@@ -33,7 +33,6 @@ const formSchema = new Schema({
 	},
 	date: {
 		type: Date,
-		default: new Date(),
 	},
 	event_type: {
 		type: String,
@@ -42,8 +41,6 @@ const formSchema = new Schema({
 	},
 	pld_topic: {
 		type: String,
-		required: true,
-		default: "null",
 	},
 	feedback: {
 		type: String,

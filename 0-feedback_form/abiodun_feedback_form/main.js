@@ -68,12 +68,12 @@ function checkInputs() {
 	}
 
 	if (!document.querySelector('input[name="Sex"]:checked')) {
-		setErrorFor(sex, "Please select your sex");
+		setErrorFor(sex, "Please select your gender");
 		return;
 	} else {
 		setSuccessFor(sexInputs[0].parentElement);
 	}
-	if (pldTopicInputValue.trim() === "") {
+	if (event_type.value === "PLD" && pldTopicInputValue.trim() === "") {
 		setErrorFor(pldTopicInput, "PLD Topic cannot be empty");
 		pldTopicInput.focus();
 	} else {
@@ -113,7 +113,8 @@ function submitForm() {
 	const feedback = document.querySelector("#Feedback").value;
 	const pldTopic = pldTopicInput.value;
 
-	if (!email || !name || !cohort || !sex || !eventType || !feedback || !pldTopic) {
+	if (!email || !name || !cohort || !sex || !eventType || !feedback) {
+		console.log("all fields are required");
 		return;
 	}
 
@@ -122,10 +123,10 @@ function submitForm() {
 		email,
 		cohort,
 		sex,
-		date,
+		date: date || new Date(),
 		event_type: eventType,
 		feedback,
-		pld_topic: pldTopic
+		pld_topic: pldTopic || "Nil",
 	};
 
 	console.log(data);
