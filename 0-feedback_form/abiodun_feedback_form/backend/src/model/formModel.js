@@ -23,6 +23,8 @@ const formSchema = new Schema({
 			"Cohort 13",
 			"Cohort 14",
 			"Cohort 15",
+			"Cohort 16",
+			"Cohort 17",
 		],
 	},
 	sex: {
@@ -37,6 +39,11 @@ const formSchema = new Schema({
 		type: String,
 		required: true,
 		enum: ["Community Hangout", "PLD", "Other"],
+	},
+	pld_topic: {
+		type: String,
+		required: true,
+		default: "null",
 	},
 	feedback: {
 		type: String,
