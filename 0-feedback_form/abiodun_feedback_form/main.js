@@ -8,7 +8,7 @@ const event_type = document.getElementById("event");
 const pldTopicGroup = document.querySelector("#pldTopicGroup");
 const pldTopicInput = document.querySelector("#pldTopic");
 
-const url = "https://codetrybe-form-api.vercel.app/api/codetrybe/feedback";
+const url = "https://codetrybe-api.vercel.app/api/codetrybe/feedback";
 // const url = "http://localhost:6060/api/codetrybe/feedback";
 
 // Focus on Email field when the page loads
