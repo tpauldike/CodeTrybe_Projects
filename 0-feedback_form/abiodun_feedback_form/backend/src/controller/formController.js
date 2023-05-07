@@ -7,9 +7,13 @@ export const postFeedback = async (req, res) => {
 			req.body;
 		const existingFeedback = await Form.findOne({ email, event_type });
 		if (existingFeedback) {
-			return res
-				.status(409)
-				.json({ message: "Your Feedback has already been taken" });
+			const today = (new Date()).toISOString().split("T")[0];
+			const existingDate = existingFeedback.date.toISOString().split("T")[0];
+			if (existingDate === today) {
+				return res
+					.status(409)
+					.json({ message: "Your Feedback has already been taken" });
+			}
 		}
 		const newFeedback = await Form.create({
 			name,

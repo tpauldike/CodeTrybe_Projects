@@ -8,7 +8,7 @@ const formSchema = new Schema({
 	email: {
 		type: String,
 		required: true,
-		unique: true,
+		// unique: true,
 	},
 	cohort: {
 		type: String,
