@@ -37,7 +37,7 @@ const formSchema = new Schema({
 	event_type: {
 		type: String,
 		required: true,
-		enum: ["Community Hangout", "PLD", "Other"],
+		enum: ["Community Hangout", "PLD"],
 	},
 	pld_topic: {
 		type: String,
